@@ -6,7 +6,7 @@ import Login from "./Login";
 import Navbar from "./Navbar";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // deconstructing
 
   return (
     <div>
@@ -16,7 +16,7 @@ function App() {
           <About />
         </Route>
         <Route exact path="/login">
-          <Login setIsLoggedIn={setIsLoggedIn} />
+          <Login setIsLoggedIn={setIsLoggedIn} /> {/* passing props to <Login /> */}
         </Route>
         <Route exact path="/">
           <Home isLoggedIn={isLoggedIn} />
